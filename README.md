@@ -1,35 +1,19 @@
-# DHT11 Python library
+# Slushie Weather Station Edge
 
-This simple class can be used for reading temperature and humidity values from DHT11 sensor on Raspberry Pi.
+This repository contains code run by telemetry devices to collect weather data and publish that data to the cloud to be analyzed by consuming applications.
 
-# Usage
+# Road Map
 
-1. Instantiate the `DHT11` class with the pin number as constructor parameter.
-2. Call `read()` method, which will return `DHT11Result` object with actual values and error code.
+## Phase 1: Indoor temperature and humidity collection system and dashboard
 
-For example:
+Indoor temperature and humidity data will be retrieved by a Raspberry Pi connected to a DHT11 sensor.  This data will be published to a cloud streaming service such as Amazon Kinesis.  Data will be accessible in a RESTful manner by fronting the streams with an API gateway.  A single client-side dashboard application will display this data in the form of current temperatures and time series.
 
-```python
-import RPi.GPIO as GPIO
-import dht11
+Current components
+- Telemetry device, Raspberry Pi with conneted DHT11 sensor. 
+- Data stream (Amazon Kinesis)
+- API gateway (Amazon API Gateway)
+- Dashboarding application (Amazon S3-hosted React.js application)
 
-# initialize GPIO
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-GPIO.cleanup()
-
-# read data using pin 14
-instance = dht11.DHT11(pin = 14)
-result = instance.read()
-
-if result.is_valid():
-    print("Temperature: %d C" % result.temperature)
-    print("Humidity: %d %%" % result.humidity)
-else:
-    print("Error: %d" % result.error_code)
-```
-
-For working example, see `dht11_example.py` (you probably need to adjust pin for your configuration)
 
 
 # License
