@@ -1,6 +1,6 @@
-# Slushie Weather Station Edge
+# Slushie Weather Station (Edge)
 
-This repository contains code run by telemetry devices to collect weather data and publish that data to the cloud to be analyzed by consuming applications.
+This repository contains code run by telemetry devices at the edge to collect weather data and publish that data to the cloud to be analyzed by consuming applications.
 
 # Road Map
 
