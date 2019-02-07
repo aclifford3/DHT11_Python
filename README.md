@@ -10,8 +10,7 @@ Indoor temperature and humidity data will be retrieved by a Raspberry Pi connect
 
 Current components
 - Telemetry device, Raspberry Pi with conneted DHT11 sensor. 
-- Data stream (Amazon Kinesis)
-- API gateway (Amazon API Gateway)
+- Database, API (AWS App Sync)
 - Dashboarding application (Amazon S3-hosted React.js application)
 
 
