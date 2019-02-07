@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
-import dht11
 import time
+from
 
 # initialize GPIO
 GPIO.setwarnings(False)
@@ -8,7 +8,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.cleanup()
 
 # read data using pin 25
-instance = dht11.DHT11(pin = 25)
+instance = dht11.dht11.DHT11(pin = 25)
 result = instance.read()
 
 def loop():
