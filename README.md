@@ -14,6 +14,15 @@ Current components
 - Dashboarding application (Amazon S3-hosted React.js application)
 
 
+## Developer Setup
+1. Install any missing Python packages
+2. Create config.py file with example contents:
+```python
+SLUSHIE_API_KEY = 'key'
+DEVICE_ID = 'pi_living_room'
+```
+
+
 
 # License
 
