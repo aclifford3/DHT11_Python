@@ -8,7 +8,7 @@ class SlushieClient:
     def __init__(self):
         self.client = GraphQLClient('https://rxmmnanjazc63nzfsn6q57nytu.appsync-api.us-east-2.amazonaws.com/graphql')
         # TODO: Environment variable, command line arg
-        self.client.inject_token('da2-3f73hehbvrg5bpfxwozxiaepla', 'x-api-key')
+        self.client.inject_token('', 'x-api-key')
 
     def update_weather_data(self, device_id, temperature, humidity, datetime):
         query = '''
