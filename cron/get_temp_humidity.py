@@ -2,7 +2,6 @@ import RPi.GPIO as GPIO
 import time
 from
 
-#Test
 
 # initialize GPIO
 GPIO.setwarnings(False)
