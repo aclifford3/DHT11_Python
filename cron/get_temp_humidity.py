@@ -13,15 +13,12 @@ GPIO.cleanup()
 instance = dht11.dht11.DHT11(pin = 25)
 result = instance.read()
 
-def loop():
-    client = SlushieClient()
-    while(True):
-        if result.is_valid():
-            print("Temperature: %d C" % result.temperature)
-            print("Humidity: %d %%" % result.humidity)
-            client.update_weather_data(config.DEVICE_ID, temperature=result.temperature, humidity=result.humidity)
-        else:
-            print("Error: %d" % result.error_code)
-        time.sleep(1)
-
-loop()
+client = SlushieClient()
+while(True):
+    if result.is_valid():
+        print("Temperature: %d C" % result.temperature)
+        print("Humidity: %d %%" % result.humidity)
+        client.update_weather_data(config.DEVICE_ID, temperature=result.temperature, humidity=result.humidity)
+    else:
+        print("Error: %d" % result.error_code)
+    time.sleep(1)
