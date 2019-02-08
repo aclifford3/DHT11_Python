@@ -7,6 +7,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+*.awskey
 .Python
 build/
 develop-eggs/
