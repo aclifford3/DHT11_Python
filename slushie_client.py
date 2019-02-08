@@ -45,7 +45,3 @@ class SlushieClient:
         print(result)
         return result
 
-
-client = SlushieClient()
-client.put_weather_data("test2",10,10)
-
