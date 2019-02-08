@@ -8,20 +8,19 @@ class SlushieClient:
     def __init__(self):
         self.client = GraphQLClient('https://rxmmnanjazc63nzfsn6q57nytu.appsync-api.us-east-2.amazonaws.com/graphql')
         # TODO: Environment variable, command line arg
-        self.client.inject_token('', 'x-api-key')
+        self.client.inject_token('da2-3f73hehbvrg5bpfxwozxiaepla', 'x-api-key')
 
     def update_weather_data(self, device_id, temperature, humidity, datetime):
-        param = "deviceId: {device_id}, temperature: {temperature}, humidity: {humidity}, datetime: {datetime}"
         query = '''
-        mutation updateWeatherData {
-            updateSlushieWeatherModel(input: {}) {
+        mutation updateWeatherData {{
+            updateSlushieWeatherModel(input: {{deviceId: {device_id}, temperature: {temperature}, humidity: {humidity}, datetime: {datetime}}}) {{
                 deviceId
                 temperature
                 humidity
                 datetime
-            }
-        }
-        '''
+            }}
+        }}
+        '''.format(device_id=device_id, temperature=temperature, humidity=humidity, datetime=datetime)
         print(query)
         result = self.client.execute(query)
         print(result)
@@ -29,5 +28,5 @@ class SlushieClient:
 
 
 client = SlushieClient()
-client.update_weather_data("test", "10", "10", datetime.datetime.now())
+client.update_weather_data("test", "10", "10", "2007-04-05T12:30-02:00")
 
