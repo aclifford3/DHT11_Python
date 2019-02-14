@@ -20,8 +20,8 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt
 
-      - test:
-          name: run unit tests
+      - run:
+          name: unit test
           command: |
             python3 -m unittest discover
 
