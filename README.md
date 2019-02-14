@@ -11,9 +11,10 @@ This repository contains code run by telemetry devices at the edge to collect we
 Indoor temperature and humidity data will be retrieved by a Raspberry Pi connected to a DHT11 sensor.  This data will be published to DynamoDB using a GraphQL API (created by AWS AppSync).  Data will be accessible using GraphQL.  A single client-side dashboard application will display this data in the form of current temperatures and time series.
 
 Current components
-- Telemetry device, Raspberry Pi with conneted DHT11 sensor. 
-- Database (DynamoDB), GraphQL API (Both created by AWS App Sync)
-- Dashboarding application (Amazon S3-hosted React.js application)
+- Telemeter (Raspberry Pi 3) with DHT11 humidity and temperature sensor
+- Collection script (get_temp_humidity.py)
+    - Rpi library for GPIO functions
+    - graphqlclient for sending data to cloud via a GraphQL API call
 
 
 ## Developer Setup
