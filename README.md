@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/aclifford3/slushie-weather-station-edge.svg?style=svg)](https://circleci.com/gh/aclifford3/slushie-weather-station-edge)
+
 # Slushie Weather Station (Edge)
 
 This repository contains code run by telemetry devices at the edge to collect weather data and publish that data to the cloud to be analyzed by consuming applications.
