@@ -22,6 +22,7 @@ SLUSHIE_API_KEY = 'key'
 DEVICE_ID = 'pi_living_room'
 ```
 
+## Phase 2
 
 
 # License
